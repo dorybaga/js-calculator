@@ -6,7 +6,7 @@
  * @return {object} `calculator` object that can be used
  */
 
-var calculatorModule = (function(){
+var calculatorModule = function(){
 
   var memory = 0;
   var total = 0;
@@ -14,8 +14,9 @@ var calculatorModule = (function(){
   /**
    * sets the `total` to the number passed in
    * @param  { Number } x
-   * @return { Number }    current total
+   * @return { Number } current total
    */
+
 
 
 
@@ -70,4 +71,4 @@ var calculatorModule = (function(){
 
 
 return calculatorModule;
-})();
+};
