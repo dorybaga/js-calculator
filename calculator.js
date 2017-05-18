@@ -19,11 +19,11 @@ var calculatorModule = function(){
    */
 
   load: function(x){
-    if (x === "number"){
-      total = x;
+    total = x;
+    if (typeof x === "number"){
       return total;
     } else {
-      throw new Error;
+      throw new Error("x is not a number");
     }
   },
 
@@ -42,10 +42,10 @@ var calculatorModule = function(){
    */
 
   add: function(x){
-    if (x === "number"){
+    if (typeof x === "number"){
       return total += x;
     } else {
-      throw error;
+      throw new Error("x is not a number");
     }
   },
 
@@ -55,10 +55,10 @@ var calculatorModule = function(){
    */
 
    subtract: function(x){
-    if (x === "number"){
+    if (typeof x === "number"){
       return total -= x;
     } else {
-      throw error;
+      throw new Error("x is not a number");
     }
    },
 
@@ -68,10 +68,10 @@ var calculatorModule = function(){
    */
 
    multiply: function(x){
-    if (x === "number"){
+    if (typeof x === "number"){
       return total *= x;
     } else {
-      throw error;
+      throw new Error("x is not a number");
     }
    },
 
@@ -81,10 +81,10 @@ var calculatorModule = function(){
    */
 
    divide: function(x){
-    if (x === "number"){
+    if (typeof x === "number"){
       return total /= x;
     } else {
-      throw error;
+      throw new Error("x is not a number");
     }
    },
 
@@ -94,19 +94,14 @@ var calculatorModule = function(){
    */
 
    recallMemory: function(x){
-    if (x === "number"){
-      return memory;
-    } else {
-      throw error;
-    }
-   },
+    return memory;
+  },
 
   /**
    * Stores the value of `total` to `memory`
    */
    saveMemory: function(x){
-    total = memory;
-    return memory;
+    memory= total;
    },
 
   /**
