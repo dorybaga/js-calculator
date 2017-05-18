@@ -19,11 +19,11 @@ var calculatorModule = function(){
    */
 
   load: function(x){
-    total = x;
     if (x === "number"){
+      total = x;
       return total;
-    } else{
-      throw error;
+    } else {
+      throw new Error;
     }
   },
 
