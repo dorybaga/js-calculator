@@ -22,7 +22,8 @@ function calculatorModule(){
 
   function getTotal(x){
     return total;
-}
+  }
+
   function add(x){
     if (typeof x === "number"){
       return total += x;
@@ -31,7 +32,7 @@ function calculatorModule(){
     }
   }
 
-function subtract(x){
+  function subtract(x){
     if (typeof x === "number"){
       return total -= x;
     } else {
@@ -39,7 +40,7 @@ function subtract(x){
     }
   }
 
-function multiply(x){
+  function multiply(x){
     if (typeof x === "number"){
       return total *= x;
     } else {
@@ -47,7 +48,7 @@ function multiply(x){
     }
   }
 
-function divide(x){
+  function divide(x){
     if (typeof x === "number"){
       return total /= x;
     } else {
@@ -55,32 +56,32 @@ function divide(x){
     }
   }
 
-function recallMemory(x){
+  function recallMemory(x){
     return memory;
   }
 
-function saveMemory(x){
+  function saveMemory(x){
     memory = total;
   }
 
-function clearMemory(x){
+  function clearMemory(x){
     memory = 0;
     return memory;
    }
 
-return {
+  return {
 
-load: load,
-getTotal: getTotal,
-add: add,
-subtract: subtract,
-multiply: multiply,
-divide: divide,
-recallMemory: recallMemory,
-saveMemory: saveMemory,
-clearMemory: clearMemory
+  load: load,
+  getTotal: getTotal,
+  add: add,
+  subtract: subtract,
+  multiply: multiply,
+  divide: divide,
+  recallMemory: recallMemory,
+  saveMemory: saveMemory,
+  clearMemory: clearMemory
 
-};
+  };
 }
 
 
