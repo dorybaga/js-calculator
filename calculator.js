@@ -6,121 +6,204 @@
  * @return {object} `calculator` object that can be used
  */
 
-var calculatorModule = function(){
-
+function calculatorModule(){
   var memory = 0;
   var total = 0;
+  var calculator = {};
 
-  var calculator = {
-  /**
-   * sets the `total` to the number passed in
-   * @param  { Number } x
-   * @return { Number } current total
-   */
-
-  load: function(x){
+  function load(x){
     total = x;
     if (typeof x === "number"){
       return total;
     } else {
       throw new Error("x is not a number");
     }
-  },
+  }
 
-  /**
-   * Return the value of `total`
-   * @return { Number }
-   */
-
-  getTotal: function(x){
+  function getTotal(x){
     return total;
-  },
-
-  /**
-   * Sums the value passed in with `total`
-   * @param { Number } x
-   */
-
-  add: function(x){
+}
+  function add(x){
     if (typeof x === "number"){
       return total += x;
     } else {
       throw new Error("x is not a number");
     }
-  },
+  }
 
-  /**
-   * Subtracts the value passed in from `total`
-   * @param  { Number } x
-   */
-
-   subtract: function(x){
+function subtract(x){
     if (typeof x === "number"){
       return total -= x;
     } else {
       throw new Error("x is not a number");
     }
-   },
+  }
 
-  /**
-   * Multiplies the value by `total`
-   * @param  { Number } x
-   */
-
-   multiply: function(x){
+function multiply(x){
     if (typeof x === "number"){
       return total *= x;
     } else {
       throw new Error("x is not a number");
     }
-   },
+  }
 
-  /**
-   * Divides the value passing in by `total`
-   * @param  { Number } x
-   */
-
-   divide: function(x){
+function divide(x){
     if (typeof x === "number"){
       return total /= x;
     } else {
       throw new Error("x is not a number");
     }
-   },
+  }
 
-  /**
-   * Return the value stored at `memory`
-   * @return { Number }
-   */
-
-   recallMemory: function(x){
+function recallMemory(x){
     return memory;
-  },
+  }
 
-  /**
-   * Stores the value of `total` to `memory`
-   */
-   saveMemory: function(x){
-    memory= total;
-   },
+function saveMemory(x){
+    memory = total;
+  }
 
-  /**
-   * Clear the value stored at `memory`
-   */
-
-   clearMemory: function(x){
+function clearMemory(x){
     memory = 0;
     return memory;
    }
 
-  /**
-   * Validation
-   */
+return {
 
-  };
-
-return calculator;
+load: load,
+getTotal: getTotal,
+add: add,
+subtract: subtract,
+multiply: multiply,
+divide: divide,
+recallMemory: recallMemory,
+saveMemory: saveMemory,
+clearMemory: clearMemory
 
 };
+}
 
-calculatorModule();
+
+
+
+
+
+
+// var calculatorModule = function(){
+
+//   var memory = 0;
+//   var total = 0;
+
+//   var calculator = {
+//   /**
+//    * sets the `total` to the number passed in
+//    * @param  { Number } x
+//    * @return { Number } current total
+//    */
+
+//   load: function(x){
+//     total = x;
+//     if (typeof x === "number"){
+//       return total;
+//     } else {
+//       throw new Error("x is not a number");
+//     }
+//   },
+
+//   /**
+//    * Return the value of `total`
+//    * @return { Number }
+//    */
+
+//   getTotal: function(x){
+//     return total;
+//   },
+
+//   /**
+//    * Sums the value passed in with `total`
+//    * @param { Number } x
+//    */
+
+//   add: function(x){
+//     if (typeof x === "number"){
+//       return total += x;
+//     } else {
+//       throw new Error("x is not a number");
+//     }
+//   },
+
+//   /**
+//    * Subtracts the value passed in from `total`
+//    * @param  { Number } x
+//    */
+
+//    subtract: function(x){
+//     if (typeof x === "number"){
+//       return total -= x;
+//     } else {
+//       throw new Error("x is not a number");
+//     }
+//    },
+
+//   /**
+//    * Multiplies the value by `total`
+//    * @param  { Number } x
+//    */
+
+//    multiply: function(x){
+//     if (typeof x === "number"){
+//       return total *= x;
+//     } else {
+//       throw new Error("x is not a number");
+//     }
+//    },
+
+//   /**
+//    * Divides the value passing in by `total`
+//    * @param  { Number } x
+//    */
+
+//    divide: function(x){
+//     if (typeof x === "number"){
+//       return total /= x;
+//     } else {
+//       throw new Error("x is not a number");
+//     }
+//    },
+
+//   /**
+//    * Return the value stored at `memory`
+//    * @return { Number }
+//    */
+
+//    recallMemory: function(x){
+//     return memory;
+//   },
+
+//   /**
+//    * Stores the value of `total` to `memory`
+//    */
+//    saveMemory: function(x){
+//     memory= total;
+//    },
+
+//   /**
+//    * Clear the value stored at `memory`
+//    */
+
+//    clearMemory: function(x){
+//     memory = 0;
+//     return memory;
+//    }
+
+//   /**
+//    * Validation
+//    */
+
+//   };
+
+// return calculator;
+
+// };
+
+// calculatorModule();
